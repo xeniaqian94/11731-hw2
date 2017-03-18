@@ -21,7 +21,7 @@ def read_bitext_file(train_source, train_target):
     lines_source = open(train_source, "r").readlines()
 
     lines_target = open(train_target, "r").readlines()
-    bitext = [(lines_source[i].strip().split(), lines_target[i].strip().split() ) for
+    bitext = [(lines_source[i].strip().split(), lines_target[i].strip().split()) for
               i in range(len(lines_source))]
 
     return bitext
@@ -45,7 +45,7 @@ class IBM():
         self.theta = defaultdict(lambda: defaultdict(lambda: 1.0 / (len(self.tgt_vocab))))
 
     def train(self):
-        print self.theta
+        # print self.theta
 
         # for i in self.tgt_vocab:
         #     for j in self.src_vocab:
@@ -53,15 +53,16 @@ class IBM():
         # self.c_f_e_old = defaultdict(lambda: defaultdict(lambda: 0.0))  # E step: initialize all counts c_ef to zero
         # self.c_e_old = defaultdict(lambda: 0.0)
 
-        num_sparse_pair=0
-        for idx,(f,e) in enumerate(self.bitext):
-            num_sparse_pair+=len(f)*len(e)
+        num_sparse_pair = 0
+        for idx, (f, e) in enumerate(self.bitext):
+            num_sparse_pair += len(f) * len(e)
         print num_sparse_pair
 
         for iter in range(self.max_iter):
 
             self.c_f_e = defaultdict(lambda: defaultdict(lambda: 0.0))  # E step: initialize all counts c_ef to zero
-            self.c_e = defaultdict(lambda: 0.0)  # Should we keep either c_e updated from 0 or only get the vocab counter
+            self.c_e = defaultdict(
+                lambda: 0.0)  # Should we keep either c_e updated from 0 or only get the vocab counter
 
             for idx, (f, e) in enumerate(self.bitext):
                 if idx % (len(self.bitext) / 3) == 0:
@@ -92,22 +93,21 @@ class IBM():
                         #     # print self.c_e[i], self.tgt_counter[i]
                         #     for j in self.src_vocab:
                         #         self.theta[i][j] = self.c_f_e[i][j] / self.c_e[i]
-            count=0
+            count = 0
             for i in self.c_f_e.keys():
                 # print self.c_e[i],self.tgt_counter[i]
                 for j in self.c_f_e[i].keys():
-                    count+=1
+                    count += 1
                     self.theta[i][j] = self.c_f_e[i][j] / self.c_e[i]
             print "num of pairs " + str(count)
 
-            print self.theta
+            # print dict(self.theta)
             ll = self.sumLL()
             print "iter " + str(iter) + ": " + str(ll)
 
     def sumLL(self):
         sumLL = 0
-
-
+        total_len=0
 
         for idx, (f, e) in enumerate(self.bitext):
 
@@ -123,6 +123,7 @@ class IBM():
                     # sum_theta += theta
                     # print i, j,sum_theta
                 sumLL += np.log(sum_theta)
+            total_len+=len(e)
 
         return sumLL
 
@@ -144,13 +145,31 @@ class IBM():
         #         #             # [6] Log Likelihood : -4.181324
         #
 
-    # def align(self):
-    #     for idx, (e, f) in enumerate(self.bitext):
-    #         for i in range(len(e)):
-    #             # ARGMAX_j θ[i,j] or other alignment in Section 11.6 (e.g., Intersection, Union, etc)
-    #             max_j, max_prob = argmax_j(f, e[i])
-    #         self.plot_alignment((max_j, max_prob), e, f)
-    #     return alignments
+    def align(self, align_output):
+        f_write=open(align_output,"w")
+        for idx, (f,e) in enumerate(self.bitext):
+            # print e,f
+            for idx2,j in enumerate(f):
+                # ARGMAX_j θ[i,j] or other alignment in Section 11.6 (e.g., Intersection, Union, etc)
+                max_i, max_prob = self.argmax_i(e, j) #argmax_e(P(e|f))
+                f_write.write(str(max_i)+"-"+str(idx2)+" ")
+            f_write.write("\n")
+
+        # return alignments
+
+    def argmax_i(self, e, j):
+        denominator = 0
+
+        max_prob = -1
+
+        for idx,i in enumerate(e):
+            # print i,self.theta[i][j]
+            denominator += self.theta[i][j]
+            if self.theta[i][j] > max_prob:
+                max_prob = self.theta[i][j]
+                max_i = idx
+
+        return max_i, max_prob
 
 
 def test_mini_nltk():
@@ -193,17 +212,19 @@ if __name__ == '__main__':
 
     # parser.add_argument('--train_target', type=str, default="./en-de/train.en-de.low.filt.en")
     parser.add_argument('--train_target', type=str, default="./en-de/valid.en-de.low.en")
+    parser.add_argument('--align_output', type=str, default="./output/alignment.txt")
 
-    parser.add_argument('--max_iter', type=int, default=20)
+    parser.add_argument('--max_iter', type=int, default=8)
 
     args = parser.parse_args()
 
-    # bitext = read_bitext_file(args.train_source,
-    #                           args.train_target)  # pairs of sentences  # bitext = [ ( ['with', 'vibrant', ..], ['mit', 'hilfe',..] ), ([], []) , ..]
+    bitext = read_bitext_file(args.train_source,
+                              args.train_target)  # pairs of sentences  # bitext = [ ( ['with', 'vibrant', ..], ['mit', 'hilfe',..] ), ([], []) , ..]
 
     # print bitext[:2]
-    bitext=test_mini()
+    # bitext = test_mini()
 
     ibm = IBM(bitext, max_iter=args.max_iter)
     ibm.train()
-    # ibm.align()
+    # print ibm.theta
+    ibm.align(args.align_output)

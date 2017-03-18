@@ -19,7 +19,9 @@ Given an alignment, extract phrases consistent with the alignment
     -f: F sentence
   Return list of extracted phrases
 '''
-def phrase_extract(self, e_aligned_words, f_aligned_words, e, f):
+# def phrase_extract(self, e_aligned_words, f_aligned_words, e, f):
+def phrase_extract(self,f_aligned_words,e,f):
+
   extracted_phrases = []
   # Loop over all substrings in the E
   for i1 in range(len(e)):

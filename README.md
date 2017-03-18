@@ -5,7 +5,7 @@ We have made baselines and sample code available for the second assignment on th
 http://phontron.com/class/mtandseq2seq2017/
  
 Basically, the assignment is to create a phrase-based translation system, but some of the surrounding framework (n-gram language modeling and decoding) is already there so you can focus on creation of the actual phrase-based system. Here are the things that need to be done:
-* (Installation of OpenFST)
+
 * IBM Model 1
 * phrase-extract
 * Creation of a WFST from the phrases
