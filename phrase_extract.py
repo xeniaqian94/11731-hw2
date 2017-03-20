@@ -15,7 +15,7 @@ Determine whether set of values is quasi-consecutive
     {1, 2, 4} => True if word at position 3 is not aligned to anything, False otherwise
 '''
 
-allow_null_alignment = False
+allow_null_alignment = True
 
 if allow_null_alignment:
     from ibmpseudo_ppt_example import read_bitext_file

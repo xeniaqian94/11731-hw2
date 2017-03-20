@@ -52,6 +52,9 @@ class IBM():
                 lambda: 0.0)  # Should we keep either c_e updated from 0 or only get the vocab counter
 
             for idx, (e, f) in enumerate(self.bitext):
+                if idx % (len(self.bitext) / 20) == 0:
+                    print iter,idx, idx * 1.0 / len(self.bitext)
+
                 denominator = defaultdict(lambda: 0.0)
                 for i in e:
                     denominator[i] = 0
@@ -88,7 +91,7 @@ class IBM():
 
         return sumLL / len(self.tgt_vocab)
 
-    def align(self, align_output,align_output_groundtruth):
+    def align(self, align_output,align_output_groundtruth,isPrint):
 
         f_write = open(align_output, "w")
         for idx, (e, f) in enumerate(self.bitext):
@@ -105,12 +108,15 @@ class IBM():
             # return alignments
         f_write.close()
         f_write_lines=open(align_output,"r").readlines()
-        f_ground_truth_lines=open(align_output_groundtruth,"r").readlines()
-        total=0
-        for i in range(len(f_ground_truth_lines)):
-            if f_ground_truth_lines[i].strip().split()== f_write_lines[i].strip().split():
-                total+=1
-        print 1.0*total/len(f_ground_truth_lines)
+
+        if isPrint:
+
+            f_ground_truth_lines=open(align_output_groundtruth,"r").readlines()
+            total=0
+            for i in range(len(f_ground_truth_lines)):
+                if f_ground_truth_lines[i].strip().split()== f_write_lines[i].strip().split():
+                    total+=1
+            print 1.0*total/len(f_ground_truth_lines)
 
     def argmax_i(self, e, j):
         denominator = 0
@@ -162,4 +168,4 @@ if __name__ == '__main__':
     ibm = IBM(bitext, max_iter=args.max_iter)
     ibm.train()
     # print ibm.theta
-    ibm.align(args.align_output,args.align_output_groundtruth)
+    ibm.align(args.align_output,args.align_output_groundtruth,False)
