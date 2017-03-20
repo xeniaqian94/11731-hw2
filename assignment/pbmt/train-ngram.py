@@ -3,10 +3,14 @@ import sys
 import math
 from collections import defaultdict
 
-ctxts1 = 0.0
-ctxts2 = defaultdict(lambda: 0.0)
-count1 = defaultdict(lambda: 0.0)
-count2 = defaultdict(lambda: 0.0)
+import os
+
+print(os.path)
+
+ctxts1 = 0.0  # total word count
+ctxts2 = defaultdict(lambda: 0.0)  # bigram denominator count
+count1 = defaultdict(lambda: 0.0)  # unigram count
+count2 = defaultdict(lambda: 0.0)  # bigram count
 with open(sys.argv[1], "r") as infile:
   for line in infile:
     vals = line.strip().split() + ["</s>"]

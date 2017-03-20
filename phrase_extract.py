@@ -112,7 +112,6 @@ if __name__ == '__main__':
     parser.add_argument('--train_source', type=str, default="./en-de/valid.en-de.low.de")
     parser.add_argument('--train_target', type=str, default="./en-de/valid.en-de.low.en")
     if allow_null_alignment:
-
         parser.add_argument('--align_output', type=str, default="./output/alignment.txt")
     else:
         parser.add_argument('--align_output', type=str, default="./output-valid/alignment.txt")
