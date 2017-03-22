@@ -46,9 +46,10 @@ class IBM():
             [len(line) for line in
              [pair[1] for pair in bitext]])  # max # of words within src sentences in the training corpus
         self.theta = defaultdict(lambda: defaultdict(lambda: 1.0 / (len(self.tgt_vocab))))
-        self.beta = defaultdict(lambda: 1.0 / max(
+        value=1.0 / max(
             [len(line) for line in
-             [pair[0] for pair in bitext]]))
+             [pair[0] for pair in bitext]])
+        self.beta = defaultdict(lambda: value)
         print 1.0 / (len(self.tgt_vocab))
 
     def train(self):
@@ -63,8 +64,7 @@ class IBM():
                 lambda: 0.0)
 
             for idx, (e, f) in enumerate(self.bitext):
-                # if idx % (len(self.bitext) / 20) == 0:
-                #     print iter,idx, idx * 1.0 / len(self.bitext)
+                # print iter,idx, idx * 1.0 / len(self.bitext)
 
                 denominator = defaultdict(lambda: 0.0)
                 denominator_2 = defaultdict(lambda: 0.0)
@@ -90,8 +90,8 @@ class IBM():
             for key in self.c_length_e_f.keys():
                 self.beta[key]=self.c_length_e_f[key]/self.c_length_e[(key[0],key[2],key[3])]
 
-            ll = self.sumLL()
-            print "iter " + str(iter) + ": " + str(ll)
+            # ll = self.sumLL()
+            print "iter " + str(iter)
             # print self.theta
 
     def sumLL(self):

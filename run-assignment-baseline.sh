@@ -7,8 +7,8 @@ set -e
 DATA_DIR=en-de
 SCRIPT_DIR=assignment/pbmt
 OUT_DIR=output
-#TRAIN_DATA=en-de/train.en-de.low.filt
-TRAIN_DATA=en-de/valid.en-de.low
+TRAIN_DATA=en-de/train.en-de.low.filt
+#TRAIN_DATA=en-de/valid.en-de.low
 # mkdir -p $OUT_DIR
 #NULL_ALIGNMENT=--null_alignment
 NULL_ALIGNMENT=

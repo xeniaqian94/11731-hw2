@@ -51,11 +51,14 @@ class IBM():
 
         for iter in range(self.max_iter):
 
+
+
             self.c_e_f = defaultdict(lambda: defaultdict(lambda: 0.0))  # E step: initialize all counts c_ef to zero
             self.c_f = defaultdict(
                 lambda: 0.0)  # Should we keep either c_e updated from 0 or only get the vocab counter
 
             for idx, (e, f) in enumerate(self.bitext):
+                print iter, idx, idx * 1.0 / len(self.bitext)
                 # if idx % (len(self.bitext) / 20) == 0:
                 #     print iter,idx, idx * 1.0 / len(self.bitext)
 
