@@ -6,7 +6,7 @@ set -e
 
 DATA_DIR=en-de
 SCRIPT_DIR=assignment/pbmt
-OUT_DIR=output
+OUT_DIR=output-ibm2
 TRAIN_DATA=en-de/train.en-de.low.filt
 #TRAIN_DATA=en-de/valid.en-de.low
 # mkdir -p $OUT_DIR
@@ -17,7 +17,7 @@ NULL_ALIGNMENT=
 python $SCRIPT_DIR/train-ngram.py $TRAIN_DATA.en $OUT_DIR/ngram-fst.txt
 
 # *** Implement 1: Train IBM Model 1 and find alignment
-python ibmpseudo_ppt_example.py --train_source $TRAIN_DATA.de --train_target $TRAIN_DATA.en --align_output $OUT_DIR/alignment.txt $NULL_ALIGNMENT
+python ibmpseudo_ppt_example-ibm2.py --train_source $TRAIN_DATA.de --train_target $TRAIN_DATA.en --align_output $OUT_DIR/alignment.txt $NULL_ALIGNMENT
 echo "Finished implement 1 "
 
 # *** Implement 2: Extract and score phrases
