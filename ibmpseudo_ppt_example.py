@@ -16,11 +16,15 @@ from itertools import count, izip, chain
 from nltk.translate import AlignedSent
 import numpy as np
 
-def read_bitext_file(train_target, train_source):
+def read_bitext_file(train_target, train_source,null_alignment=True):
     lines_source = open(train_source, "r").readlines()
     lines_target = open(train_target, "r").readlines()
-    bitext = [(['NULL']+lines_target[i].strip().split(), lines_source[i].strip().split()) for
+    if null_alignment:
+        bitext = [(['NULL']+lines_target[i].strip().split(), lines_source[i].strip().split()) for
               i in range(len(lines_source))]  #allows null assignment
+    else:
+        bitext = [(lines_target[i].strip().split(), lines_source[i].strip().split()) for
+                  i in range(len(lines_source))]
     return bitext
 
 
@@ -52,8 +56,8 @@ class IBM():
                 lambda: 0.0)  # Should we keep either c_e updated from 0 or only get the vocab counter
 
             for idx, (e, f) in enumerate(self.bitext):
-                if idx % (len(self.bitext) / 20) == 0:
-                    print iter,idx, idx * 1.0 / len(self.bitext)
+                # if idx % (len(self.bitext) / 20) == 0:
+                #     print iter,idx, idx * 1.0 / len(self.bitext)
 
                 denominator = defaultdict(lambda: 0.0)
                 for i in e:
@@ -154,16 +158,20 @@ if __name__ == '__main__':
     parser.add_argument('--train_target', type=str, default="./en-de/valid.en-de.low.en")
     parser.add_argument('--align_output', type=str, default="./output/alignment.txt")
     parser.add_argument('--align_output_groundtruth',type=str,default="./output-valid/alignment.txt")
+    parser.add_argument('--null_alignment', action='store_true')
 
-    parser.add_argument('--max_iter', type=int, default=8)
+    parser.add_argument('--max_iter', type=int, default=30)
 
     args = parser.parse_args()
 
+    print "allow null alignment " + str(args.null_alignment)
+
     bitext = read_bitext_file(args.train_target,
-                              args.train_source)  # pairs of sentences  # bitext = [ ( ['with', 'vibrant', ..], ['mit', 'hilfe',..] ), ([], []) , ..]
+                              args.train_source,args.null_alignment)  # pairs of sentences  # bitext = [ ( ['with', 'vibrant', ..], ['mit', 'hilfe',..] ), ([], []) , ..]
 
     # print bitext[:2]
     # bitext = test_mini()
+
 
     ibm = IBM(bitext, max_iter=args.max_iter)
     ibm.train()

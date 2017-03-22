@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4730560-d114-4be0-a88a-ca636768e09f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/alignment.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/alignment_longtime.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/blind.baseline.en" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/ngram-fst.fst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/ngram-fst.isym" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/ngram-fst_longtime.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/phrase-fst.fst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/phrase-fst.isym" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/phrase-fst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/phrase.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/phrase_longtime.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/test.baseline.en" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/valid.baseline.en" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/archive/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run-assignment-baseline.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/output-pipeline/ngram-fst.txt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ibmpseudo.py" afterPath="$PROJECT_DIR$/archive/ibmpseudo.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ibmpseudo_ppt_example_original_direction.py" afterPath="$PROJECT_DIR$/archive/ibmpseudo_ppt_example_original_direction.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/phrase_extract_pseudo.py" afterPath="$PROJECT_DIR$/archive/phrase_extract_pseudo.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/run-assignment-modified.sh" afterPath="$PROJECT_DIR$/run-assignment-ibm2.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/run-assignment.sh" afterPath="$PROJECT_DIR$/archive/run-assignment.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ibmpseudo_ppt_example.py" afterPath="$PROJECT_DIR$/ibmpseudo_ppt_example.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/alignment.txt" afterPath="$PROJECT_DIR$/output/alignment.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/ngram-fst.txt" afterPath="$PROJECT_DIR$/output/ngram-fst.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/phrase-fst.txt" afterPath="$PROJECT_DIR$/output/phrase-fst.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/phrase.txt" afterPath="$PROJECT_DIR$/output/phrase.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phrase_extract.py" afterPath="$PROJECT_DIR$/phrase_extract.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run-assignment-modified.sh" afterPath="$PROJECT_DIR$/run-assignment-modified.sh" />
     </list>
     <ignored path="hw2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +37,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="ibmpseudo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibmpseudo.py">
+        <entry file="file://$PROJECT_DIR$/archive/ibmpseudo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-204">
-              <caret line="114" column="62" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="114" selection-end-column="62" />
+              <caret line="114" column="62" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="114" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -50,8 +49,8 @@
       <file leaf-file-name="ibmpseudo_ppt_example.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ibmpseudo_ppt_example.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1207">
-              <caret line="71" column="54" lean-forward="true" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+            <state relative-caret-position="196">
+              <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
               <folding>
                 <element signature="e#385#400#0" expanded="true" />
               </folding>
@@ -62,15 +61,15 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ibmpseudo_ppt_example_original_direction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ibmpseudo_ppt_example_original_direction.py">
+        <entry file="file://$PROJECT_DIR$/archive/ibmpseudo_ppt_example_original_direction.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-391">
               <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -79,21 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="phrase_extract_pseudo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phrase_extract_pseudo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phrase_extract.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="phrase_extract.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/phrase_extract.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+            <state relative-caret-position="230">
+              <caret line="119" column="4" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
               <folding>
                 <element signature="e#27#42#0" expanded="true" />
               </folding>
@@ -104,37 +93,47 @@
       <file leaf-file-name="create-phrase-fst.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-phrase-fst.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="85" column="46" lean-forward="true" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+            <state relative-caret-position="1053">
+              <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run-assignment-modified.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run-assignment-modified.sh">
+      <file leaf-file-name="run-assignment-baseline.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run-assignment-baseline.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+            <state relative-caret-position="621">
+              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multi-bleu.perl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/pbmt/multi-bleu.perl">
+      <file leaf-file-name="run-assignment-ibm2.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/run-assignment-ibm2.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+            <state relative-caret-position="391">
+              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run-assignment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment/pbmt/run-assignment.sh">
+      <file leaf-file-name="run-assignment-interestion.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run-assignment-interestion.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="-178">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="run-assignment-null.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run-assignment-null.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
               <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
@@ -142,6 +141,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -165,16 +171,19 @@
         <option value="$PROJECT_DIR$/assignment/pbmt/train-ngram.py" />
         <option value="$PROJECT_DIR$/assignment/pbmt/run-assignment.sh" />
         <option value="$PROJECT_DIR$/run-assignment.sh" />
-        <option value="$PROJECT_DIR$/ibmpseudo_ppt_example.py" />
         <option value="$PROJECT_DIR$/create-phrase-fst.py" />
-        <option value="$PROJECT_DIR$/phrase_extract.py" />
         <option value="$PROJECT_DIR$/run-assignment-modified.sh" />
+        <option value="$PROJECT_DIR$/run-assignment-interestion.sh" />
+        <option value="$PROJECT_DIR$/phrase_extract.py" />
+        <option value="$PROJECT_DIR$/run-assignment-null.sh" />
+        <option value="$PROJECT_DIR$/run-assignment-baseline.sh" />
+        <option value="$PROJECT_DIR$/ibmpseudo_ppt_example.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="124" />
+    <option name="x" value="32" />
+    <option name="y" value="30" />
     <option name="width" value="1386" />
     <option name="height" value="873" />
   </component>
@@ -223,6 +232,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="11731-hw2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="11731-hw2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="archive" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -234,11 +257,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/archive" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.create-phrase-fst">
+  <component name="RunManager" selected="Python.phrase_extract">
     <configuration default="false" name="ibmpseudo-ppt-example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -268,7 +294,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="hw2" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ibmpseudo_ppt_example_original_direction.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archive/ibmpseudo_ppt_example_original_direction.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -467,10 +493,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.create-phrase-fst" />
-        <item index="1" class="java.lang.String" itemvalue="Python.train-ngram" />
-        <item index="2" class="java.lang.String" itemvalue="Python.phrase_extract" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ibmpseudo-ppt-example" />
+        <item index="0" class="java.lang.String" itemvalue="Python.phrase_extract" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ibmpseudo-ppt-example" />
+        <item index="2" class="java.lang.String" itemvalue="Python.create-phrase-fst" />
+        <item index="3" class="java.lang.String" itemvalue="Python.train-ngram" />
         <item index="4" class="java.lang.String" itemvalue="Python.ibmpseudo-ppt-example-original-direction" />
       </list>
     </recent_temporary>
@@ -489,15 +515,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="124" width="1386" height="873" extended-state="0" />
+    <frame x="32" y="30" width="1386" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22655122" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17604618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18656716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0659204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -551,7 +577,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ibmpseudo.py">
+    <entry file="file://$PROJECT_DIR$/archive/ibmpseudo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
@@ -571,7 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ibmpseudo_ppt_example_original_direction.py">
+    <entry file="file://$PROJECT_DIR$/archive/ibmpseudo_ppt_example_original_direction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -587,7 +613,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phrase_extract_pseudo.py">
+    <entry file="file://$PROJECT_DIR$/archive/phrase_extract_pseudo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
@@ -643,7 +669,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ibmpseudo.py">
+    <entry file="file://$PROJECT_DIR$/archive/ibmpseudo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3553">
           <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
@@ -720,18 +746,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run-assignment.sh">
+    <entry file="file://$PROJECT_DIR$/archive/run-assignment.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -744,7 +762,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ibmpseudo_ppt_example_original_direction.py">
+    <entry file="file://$PROJECT_DIR$/assignment/pbmt/multi-bleu.perl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/ibmpseudo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="114" column="62" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="114" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/phrase_extract_pseudo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/ibmpseudo_ppt_example_original_direction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -754,61 +796,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create-phrase-fst.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="85" column="46" lean-forward="true" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+        <state relative-caret-position="1053">
+          <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment/pbmt/multi-bleu.perl">
+    <entry file="file://$PROJECT_DIR$/run-assignment-null.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ibmpseudo.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="114" column="62" lean-forward="true" selection-start-line="113" selection-start-column="12" selection-end-line="114" selection-end-column="62" />
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ibmpseudo_ppt_example.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="54" lean-forward="true" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+        <state relative-caret-position="196">
+          <caret line="54" column="35" lean-forward="false" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
           <folding>
             <element signature="e#385#400#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/phrase_extract_pseudo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run-assignment-modified.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phrase_extract.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        <state relative-caret-position="230">
+          <caret line="119" column="4" lean-forward="false" selection-start-line="119" selection-start-column="4" selection-end-line="119" selection-end-column="4" />
           <folding>
             <element signature="e#27#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-assignment-interestion.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-178">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-assignment-baseline.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run-assignment-ibm2.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
